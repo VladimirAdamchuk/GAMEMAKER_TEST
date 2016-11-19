@@ -5,45 +5,65 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\sound_logo</sound>
-    <sound>sound\sound_start</sound>
+    <sounds name="logo">
+      <sound>sound\sound_start</sound>
+      <sound>sound\sound_logo</sound>
+    </sounds>
+    <sound>sound\sound_menu</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\spr_black_screen_logo</sprite>
-    <sprite>sprites\spr_wargaming_logo</sprite>
-    <sprite>sprites\spr_newbie_border_logo</sprite>
-    <sprite>sprites\spr_cyber_logo</sprite>
-    <sprite>sprites\spr_newbie_logo</sprite>
-    <sprite>sprites\spt_team_logo</sprite>
-    <sprite>sprites\spt_wga_logo</sprite>
-    <sprite>sprites\spr_coin_logo</sprite>
-    <sprite>sprites\spr_tvline</sprite>
-    <sprite>sprites\spr_bigtvline</sprite>
-    <sprite>sprites\spr_screen</sprite>
-    <sprite>sprites\spr_darkscreen</sprite>
+    <sprite>sprites\spr_fighter_menu</sprite>
+    <sprite>sprites\spr_fighter_come_menu</sprite>
+    <sprite>sprites\spr_fighter_out_menu</sprite>
+    <sprite>sprites\spr_avatar_menu</sprite>
+    <sprites name="logo">
+      <sprite>sprites\spr_black_screen_logo</sprite>
+      <sprite>sprites\spt_wga_logo</sprite>
+      <sprite>sprites\spt_team_logo</sprite>
+      <sprite>sprites\spr_newbie_border_logo</sprite>
+      <sprite>sprites\spr_cyber_logo</sprite>
+      <sprite>sprites\spr_wargaming_logo</sprite>
+      <sprite>sprites\spr_newbie_logo</sprite>
+      <sprite>sprites\spr_coin_logo</sprite>
+    </sprites>
+    <sprites name="TV">
+      <sprite>sprites\spr_bigtvline</sprite>
+      <sprite>sprites\spr_darkscreen</sprite>
+      <sprite>sprites\spr_tvline</sprite>
+      <sprite>sprites\spr_screen</sprite>
+    </sprites>
+    <sprite>sprites\spr_marker_menu</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_logo</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\o_controller_logo</object>
-    <object>objects\o_lline_logo</object>
-    <object>objects\o_blackscreen_logo</object>
-    <object>objects\o_newbie_border_logo</object>
-    <object>objects\o_newbie_logo</object>
-    <object>objects\o_cyber_logo</object>
-    <object>objects\o_coin_logo</object>
-    <object>objects\o_team_logo</object>
-    <object>objects\o_wga_logo</object>
-    <object>objects\o_screen</object>
-    <object>objects\o_darkscreen</object>
-    <object>objects\o_tvline</object>
-    <object>objects\o_big_tvline</object>
+    <object>objects\o_avatar</object>
+    <object>objects\o_marker_menu</object>
+    <object>objects\o_fighter_menu</object>
+    <object>objects\o_controller_menu</object>
+    <objects name="tv">
+      <object>objects\o_tvline</object>
+      <object>objects\o_big_tvline</object>
+      <object>objects\o_screen</object>
+      <object>objects\o_darkscreen</object>
+    </objects>
+    <objects name="logo">
+      <object>objects\o_controller_logo</object>
+      <object>objects\o_lline_logo</object>
+      <object>objects\o_wga_logo</object>
+      <object>objects\o_blackscreen_logo</object>
+      <object>objects\o_newbie_border_logo</object>
+      <object>objects\o_newbie_logo</object>
+      <object>objects\o_team_logo</object>
+      <object>objects\o_cyber_logo</object>
+      <object>objects\o_coin_logo</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_logo</room>
     <room>rooms\room_menu</room>
+    <room>rooms\room_logo</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
