@@ -63,8 +63,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_menu</room>
     <room>rooms\room_logo</room>
+    <room>rooms\room_menu</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
