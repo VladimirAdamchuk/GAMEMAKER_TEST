@@ -226,6 +226,7 @@ draw_line(0,room_height/2+4000,room_width,room_height/2+20);
             <string>if marker.y != room_height/2 +64
 {
     marker.y += 64
+    audio_play_sound (sound_marker,2,0)
 }
 </string>
           </argument>
@@ -252,6 +253,7 @@ draw_line(0,room_height/2+4000,room_width,room_height/2+20);
             <string>if marker.x != room_width/2 +64
 {
     marker.x += 64
+    audio_play_sound (sound_marker,2,0)
 }
 </string>
           </argument>
@@ -278,6 +280,7 @@ draw_line(0,room_height/2+4000,room_width,room_height/2+20);
             <string>if marker.y != room_height/2 -128
 {
     marker.y -= 64
+    audio_play_sound (sound_marker,2,0)
 }
 </string>
           </argument>
@@ -304,6 +307,7 @@ draw_line(0,room_height/2+4000,room_width,room_height/2+20);
             <string>if marker.x != room_width/2 -64
 {
     marker.x -= 64
+    audio_play_sound (sound_marker,2,0)
 }
 </string>
           </argument>

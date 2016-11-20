@@ -10,6 +10,7 @@
       <sound>sound\sound_logo</sound>
     </sounds>
     <sound>sound\sound_menu</sound>
+    <sound>sound\sound_marker</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_fighter_menu</sprite>
