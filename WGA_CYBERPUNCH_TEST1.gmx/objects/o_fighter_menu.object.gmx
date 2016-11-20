@@ -50,7 +50,74 @@
             <kind>1</kind>
             <string>if global.status_menu == 'ready'
 {
-   //
+    switch global.p1.image_index
+    {
+        case 0:
+        {
+            sprite_index = spr_fighter_purple_menu;
+            break;
+        }
+        case 1:
+        {
+            sprite_index = spr_fighter_blue_menu;
+            break;
+        }
+        case 2:
+        {
+            sprite_index = spr_fighter_aqua_menu;
+            break;
+        }
+        case 3:
+        {
+            sprite_index = spr_fighter_green_menu;
+            break;
+        }
+        case 4:
+        {
+            sprite_index = spr_fighter_yellow_menu;
+            break;
+        }
+        case 5:
+        {
+            sprite_index = spr_fighter_red_menu;
+            break;
+        }
+        case 6:
+        {
+            sprite_index = spr_fighter_darkpurple_menu;
+            break;
+        }
+        case 7:
+        {
+            sprite_index = spr_fighter_darkblue_menu;
+            break;
+        }
+        case 8:
+        {
+            sprite_index = spr_fighter_darkaqua_menu;
+            break;
+        }
+        case 9:
+        {
+            sprite_index = spr_fighter_darkgreen_menu;
+            break;
+        }
+        case 10:
+        {
+            sprite_index = spr_fighter_darkred_menu;
+            break;
+        }
+        case 11:
+        {
+            sprite_index = spr_fighter_white_menu;
+            break;
+        }
+        default: 
+        {
+            sprite_index = spr_fighter_menu;
+            break;
+        }
+    }
 }
 </string>
           </argument>
@@ -69,5 +136,8 @@
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>98,131</point>
+    <point>131,131</point>
+  </PhysicsShapePoints>
 </object>

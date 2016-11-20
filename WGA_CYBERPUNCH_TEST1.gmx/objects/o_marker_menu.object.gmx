@@ -77,6 +77,7 @@ alarm[0] = blink_speed
 {
     global.p1 = collision_point(x,y,o_avatar,0,0)
 }
+
 </string>
           </argument>
         </arguments>
@@ -94,5 +95,8 @@ alarm[0] = blink_speed
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>33,33</point>
+    <point>33,33</point>
+  </PhysicsShapePoints>
 </object>

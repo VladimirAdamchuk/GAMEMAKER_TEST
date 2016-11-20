@@ -14,6 +14,18 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_fighter_menu</sprite>
+    <sprite>sprites\spr_fighter_purple_menu</sprite>
+    <sprite>sprites\spr_fighter_blue_menu</sprite>
+    <sprite>sprites\spr_fighter_aqua_menu</sprite>
+    <sprite>sprites\spr_fighter_green_menu</sprite>
+    <sprite>sprites\spr_fighter_yellow_menu</sprite>
+    <sprite>sprites\spr_fighter_red_menu</sprite>
+    <sprite>sprites\spr_fighter_darkpurple_menu</sprite>
+    <sprite>sprites\spr_fighter_darkblue_menu</sprite>
+    <sprite>sprites\spr_fighter_darkaqua_menu</sprite>
+    <sprite>sprites\spr_fighter_darkgreen_menu</sprite>
+    <sprite>sprites\spr_fighter_darkred_menu</sprite>
+    <sprite>sprites\spr_fighter_white_menu</sprite>
     <sprite>sprites\spr_fighter_come_menu</sprite>
     <sprite>sprites\spr_fighter_out_menu</sprite>
     <sprite>sprites\spr_avatar_menu</sprite>
@@ -65,6 +77,7 @@
   <rooms name="rooms">
     <room>rooms\room_logo</room>
     <room>rooms\room_menu</room>
+    <room>rooms\room_game</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
