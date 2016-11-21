@@ -9,26 +9,13 @@
       <sound>sound\sound_start</sound>
       <sound>sound\sound_logo</sound>
     </sounds>
-    <sound>sound\sound_menu</sound>
-    <sound>sound\sound_marker</sound>
+    <sounds name="menu">
+      <sound>sound\sound_menu</sound>
+      <sound>sound\sound_marker</sound>
+    </sounds>
+    <sound>sound\sound_game</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\spr_fighter_menu</sprite>
-    <sprite>sprites\spr_fighter_purple_menu</sprite>
-    <sprite>sprites\spr_fighter_blue_menu</sprite>
-    <sprite>sprites\spr_fighter_aqua_menu</sprite>
-    <sprite>sprites\spr_fighter_green_menu</sprite>
-    <sprite>sprites\spr_fighter_yellow_menu</sprite>
-    <sprite>sprites\spr_fighter_red_menu</sprite>
-    <sprite>sprites\spr_fighter_darkpurple_menu</sprite>
-    <sprite>sprites\spr_fighter_darkblue_menu</sprite>
-    <sprite>sprites\spr_fighter_darkaqua_menu</sprite>
-    <sprite>sprites\spr_fighter_darkgreen_menu</sprite>
-    <sprite>sprites\spr_fighter_darkred_menu</sprite>
-    <sprite>sprites\spr_fighter_white_menu</sprite>
-    <sprite>sprites\spr_fighter_come_menu</sprite>
-    <sprite>sprites\spr_fighter_out_menu</sprite>
-    <sprite>sprites\spr_avatar_menu</sprite>
     <sprites name="logo">
       <sprite>sprites\spr_black_screen_logo</sprite>
       <sprite>sprites\spt_wga_logo</sprite>
@@ -45,17 +32,44 @@
       <sprite>sprites\spr_tvline</sprite>
       <sprite>sprites\spr_screen</sprite>
     </sprites>
-    <sprite>sprites\spr_marker_menu</sprite>
+    <sprites name="menu">
+      <sprite>sprites\spr_marker_menu</sprite>
+      <sprite>sprites\spr_fighter_out_menu</sprite>
+      <sprite>sprites\spr_fighter_darkred_menu</sprite>
+      <sprite>sprites\spr_fighter_come_menu</sprite>
+      <sprite>sprites\spr_fighter_red_menu</sprite>
+      <sprite>sprites\spr_fighter_darkblue_menu</sprite>
+      <sprite>sprites\spr_fighter_aqua_menu</sprite>
+      <sprite>sprites\spr_fighter_purple_menu</sprite>
+      <sprite>sprites\spr_fighter_menu</sprite>
+      <sprite>sprites\spr_fighter_blue_menu</sprite>
+      <sprite>sprites\spr_fighter_green_menu</sprite>
+      <sprite>sprites\spr_fighter_yellow_menu</sprite>
+      <sprite>sprites\spr_fighter_darkpurple_menu</sprite>
+      <sprite>sprites\spr_fighter_darkaqua_menu</sprite>
+      <sprite>sprites\spr_fighter_darkgreen_menu</sprite>
+      <sprite>sprites\spr_fighter_white_menu</sprite>
+      <sprite>sprites\spr_avatar_menu</sprite>
+    </sprites>
+    <sprite>sprites\spr_button_up_game</sprite>
+    <sprite>sprites\spr_button_down_game</sprite>
+    <sprite>sprites\spr_button_left_game</sprite>
+    <sprite>sprites\spr_button_right_game</sprite>
+    <sprite>sprites\spr_button_a_game</sprite>
+    <sprite>sprites\spr_button_b_game</sprite>
+    <sprite>sprites\spr_button_x_game</sprite>
+    <sprite>sprites\spr_button_y_game</sprite>
+    <sprite>sprites\spr_hit_game</sprite>
+    <sprite>sprites\spr_combo_list_game</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_logo</background>
   </backgrounds>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\font_main</font>
+  </fonts>
   <objects name="objects">
-    <object>objects\o_avatar</object>
-    <object>objects\o_marker_menu</object>
-    <object>objects\o_fighter_menu</object>
-    <object>objects\o_controller_menu</object>
     <objects name="tv">
       <object>objects\o_tvline</object>
       <object>objects\o_big_tvline</object>
@@ -73,6 +87,18 @@
       <object>objects\o_cyber_logo</object>
       <object>objects\o_coin_logo</object>
     </objects>
+    <objects name="menu">
+      <object>objects\o_controller_menu</object>
+      <object>objects\o_fighter_menu</object>
+      <object>objects\o_avatar</object>
+      <object>objects\o_marker_menu</object>
+    </objects>
+    <object>objects\o_input1</object>
+    <object>objects\o_hit_game</object>
+    <object>objects\o_button_game</object>
+    <object>objects\o_combo_list_game</object>
+    <object>objects\o_player_1</object>
+    <object>objects\o_controller_game</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_logo</room>

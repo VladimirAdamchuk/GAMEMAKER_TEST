@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0.25
+            <string>status = 'ready'
+image_speed = 0.25
 </string>
           </argument>
         </arguments>
@@ -50,75 +51,123 @@
             <kind>1</kind>
             <string>if global.status_menu == 'ready'
 {
-    switch global.p1.image_index
+    if status == 'ready'
     {
-        case 0:
+        switch global.p1.image_index
         {
-            sprite_index = spr_fighter_purple_menu;
-            break;
+            case 0:
+            {
+                sprite_index = spr_fighter_purple_menu;
+                break;
+            }
+            case 1:
+            {
+                sprite_index = spr_fighter_blue_menu;
+                break;
+            }
+            case 2:
+            {
+                sprite_index = spr_fighter_aqua_menu;
+                break;
+            }
+            case 3:
+            {
+                sprite_index = spr_fighter_green_menu;
+                break;
+            }
+            case 4:
+            {
+                sprite_index = spr_fighter_yellow_menu;
+                break;
+            }
+            case 5:
+            {
+                sprite_index = spr_fighter_red_menu;
+                break;
+            }
+            case 6:
+            {
+                sprite_index = spr_fighter_darkpurple_menu;
+                break;
+            }
+            case 7:
+            {
+                sprite_index = spr_fighter_darkblue_menu;
+                break;
+            }
+            case 8:
+            {
+                sprite_index = spr_fighter_darkaqua_menu;
+                break;
+            }
+            case 9:
+            {
+                sprite_index = spr_fighter_darkgreen_menu;
+                break;
+            }
+            case 10:
+            {
+                sprite_index = spr_fighter_darkred_menu;
+                break;
+            }
+            case 11:
+            {
+                sprite_index = spr_fighter_white_menu;
+                break;
+            }
+            default: 
+            {
+                sprite_index = spr_fighter_menu;
+                break;
+            }
         }
-        case 1:
+    }
+    else
+    {
+        if status == 'come'
         {
-            sprite_index = spr_fighter_blue_menu;
-            break;
+            sprite_index = spr_fighter_come_menu;    
         }
-        case 2:
+        if status == 'out'
         {
-            sprite_index = spr_fighter_aqua_menu;
-            break;
-        }
-        case 3:
-        {
-            sprite_index = spr_fighter_green_menu;
-            break;
-        }
-        case 4:
-        {
-            sprite_index = spr_fighter_yellow_menu;
-            break;
-        }
-        case 5:
-        {
-            sprite_index = spr_fighter_red_menu;
-            break;
-        }
-        case 6:
-        {
-            sprite_index = spr_fighter_darkpurple_menu;
-            break;
-        }
-        case 7:
-        {
-            sprite_index = spr_fighter_darkblue_menu;
-            break;
-        }
-        case 8:
-        {
-            sprite_index = spr_fighter_darkaqua_menu;
-            break;
-        }
-        case 9:
-        {
-            sprite_index = spr_fighter_darkgreen_menu;
-            break;
-        }
-        case 10:
-        {
-            sprite_index = spr_fighter_darkred_menu;
-            break;
-        }
-        case 11:
-        {
-            sprite_index = spr_fighter_white_menu;
-            break;
-        }
-        default: 
-        {
-            sprite_index = spr_fighter_menu;
-            break;
+            sprite_index = spr_fighter_out_menu;    
         }
     }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if status != 'ready'
+{
+    if status == 'out'
+    {
+        status = 'come'
+    }
+    else
+    {
+        status = 'ready'   
+    }
+}
+
 </string>
           </argument>
         </arguments>
