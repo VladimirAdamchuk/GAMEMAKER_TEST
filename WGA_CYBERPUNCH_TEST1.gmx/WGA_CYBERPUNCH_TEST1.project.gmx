@@ -60,6 +60,10 @@
     <sprite>sprites\spr_button_x_game</sprite>
     <sprite>sprites\spr_button_y_game</sprite>
     <sprite>sprites\spr_hit_game</sprite>
+    <sprite>sprites\spr_fighter_walk_game</sprite>
+    <sprite>sprites\spr_fighter_headfirs_game</sprite>
+    <sprite>sprites\spr_tmp</sprite>
+    <sprite>sprites\spr_fighter_stay_game</sprite>
     <sprite>sprites\spr_combo_list_game</sprite>
   </sprites>
   <backgrounds name="background">
@@ -94,6 +98,7 @@
       <object>objects\o_marker_menu</object>
     </objects>
     <object>objects\o_input1</object>
+    <object>objects\o_fighter_1</object>
     <object>objects\o_hit_game</object>
     <object>objects\o_button_game</object>
     <object>objects\o_combo_list_game</object>

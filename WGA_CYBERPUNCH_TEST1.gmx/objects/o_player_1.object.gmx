@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -29,10 +29,15 @@
 status = 'none'
 statuspos = 'none'
 color = c_red
-jump_speed = -10
+jump_speed = -15;
+grav = 0.4
 move_speed = 5;
 target = noone
 tmp = noone
+fighter = instance_create(x,y,o_fighter_1);
+height = 256
+width = 128
+
 </string>
           </argument>
         </arguments>
@@ -63,7 +68,7 @@ switch statuspos
     {
         if keyboard_check(vk_down)
         {
-            draw_rectangle(x,y,x+128,y-128,1);
+            draw_rectangle(x-width/2,y+height/4,x+width/2,y-height/4,1);
         }
         else
         {
@@ -73,7 +78,7 @@ switch statuspos
     }
     case 'jump':
     {
-        draw_rectangle(x,y,x+128,y-256,1);
+        draw_rectangle(x-width/2,y+height/2,x+width/2,y-height/2,1);
         if y == ystart
         {
             vspeed = jump_speed
@@ -82,10 +87,11 @@ switch statuspos
     }
     case 'left':
     {
-        draw_rectangle(x,y,x+128,y-256,1);
+        draw_rectangle(x-width/2,y+height/2,x+width/2,y-height/2,1);
         if x &gt; 0
         {
             x -= move_speed
+            fighter.sprite_index = spr_fighter_walk_game; 
         }
         else
         {
@@ -99,10 +105,11 @@ switch statuspos
     }
     case 'right':
     {
-        draw_rectangle(x,y,x+128,y-256,1);
+        draw_rectangle(x-width/2,y+height/2,x+width/2,y-height/2,1);
         if x &lt; room_width-128
         {
             x += move_speed
+            fighter.sprite_index = spr_fighter_walk_game; 
         }
         else
         {
@@ -116,7 +123,7 @@ switch statuspos
     }
     default:
     {   
-        draw_rectangle(x,y,x+128,y-256,1);
+        draw_rectangle(x-width/2,y+height/2,x+width/2,y-height/2,1);
         break;
     }
 }
@@ -124,7 +131,7 @@ switch statuspos
 //gravity
 if y != ystart
 {
-    vspeed += 0.2
+    vspeed += grav
 }
 if y &gt; ystart
 {
@@ -132,6 +139,16 @@ if y &gt; ystart
     y = ystart;
     statuspos = 'none'
 }
+if target.x &lt; x
+{
+    fighter.image_xscale = -1
+}
+else
+{
+    fighter.image_xscale = 1
+}
+fighter.x = x;
+fighter.y = y;
 </string>
           </argument>
         </arguments>
@@ -160,12 +177,12 @@ switch status
     {
         if target.x &lt; x
         {   
-            tmp = instance_create(x-64,y-128,o_hit_game)
+            tmp = instance_create(x-width,y,o_hit_game)
             tmp.mom = id
         }
         else
         {
-            tmp = instance_create(x+192,y-128,o_hit_game)
+            tmp = instance_create(x+width,y,o_hit_game)
             tmp.mom = id
         }
         status = 'hit'; 
@@ -175,12 +192,12 @@ switch status
     {
         if target.x &lt; x
         {
-            tmp = instance_create(x-64,y-64,o_hit_game)
+            tmp = instance_create(x-width,y+height/4,o_hit_game)
             tmp.mom = id
         }
         else
         {
-            tmp = instance_create(x+192,y-64,o_hit_game)
+            tmp = instance_create(x+width,y+height/4,o_hit_game)
             tmp.mom = id
         }
         status = 'hit';   
@@ -190,14 +207,17 @@ switch status
     {
         if target.x &lt; x
         {
-            tmp = instance_create(x-64,y-240,o_hit_game)
+            tmp = instance_create(x-width,y-height/3,o_hit_game)
             tmp.mom = id
         }
         else
         {
-            tmp = instance_create(x+192,y-240,o_hit_game)
+            tmp = instance_create(x+width,y-height/3,o_hit_game)
             tmp.mom = id
         }
+        fighter.sprite_index = spr_fighter_headfirs_game;
+        fighter.image_index = 0;
+        fighter.image_speed = 0.2
         status = 'hit';   
         break;        
     }
@@ -205,12 +225,12 @@ switch status
     {
         if target.x &lt; x
         {
-            tmp = instance_create(x-64,y-200,o_hit_game)
+            tmp = instance_create(x-width,y-height/4,o_hit_game)
             tmp.mom = id
         }
         else
         {
-            tmp = instance_create(x+192,y-200,o_hit_game)
+            tmp = instance_create(x+width,y-height/4,o_hit_game)
             tmp.mom = id
         }
         status = 'hit';   
