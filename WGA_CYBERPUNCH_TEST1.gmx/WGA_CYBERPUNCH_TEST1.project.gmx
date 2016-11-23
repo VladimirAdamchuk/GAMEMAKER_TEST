@@ -106,8 +106,8 @@
     <object>objects\o_controller_game</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_menu</room>
     <room>rooms\room_logo</room>
+    <room>rooms\room_menu</room>
     <room>rooms\room_game</room>
   </rooms>
   <help>
