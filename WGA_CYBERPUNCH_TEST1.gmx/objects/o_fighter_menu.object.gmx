@@ -51,7 +51,7 @@ image_speed = 0.25
             <kind>1</kind>
             <string>if global.status_menu == 'ready'
 {
-    if status == 'ready'
+    if status == 'ready' &amp;&amp; global.p1 != noone
     {
         switch global.p1.image_index
         {
